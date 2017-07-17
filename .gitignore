@@ -1,0 +1,10 @@
+
+/.vagrant
+/src/result/*
+!/src/result/.gitkeep
+*.log
+
+
+
+
+

@@ -1,0 +1,16 @@
+## vagrant user cron
+############################
+# every hour or min
+* * * * * php ~/src/batch/cronexec.php everyminute >> ~/src/batch/cronexec.log
+0 * * * * php ~/src/batch/cronexec.php everyhour   >> ~/src/batch/cronexec.log
+30 * * * * php ~/src/batch/cronexec.php everyhour30 >> ~/src/batch/cronexec.log
+*/5 * * * * php ~/src/batch/cronexec.php every5min  >> ~/src/batch/cronexec.log
+############################
+# Fixed 
+0 1  * * * php ~/src/batch/cronexec.php fixed9 >> ~/src/batch/cronexec.log
+0 9  * * * php ~/src/batch/cronexec.php fixed9  >> ~/src/batch/cronexec.log
+0 10 * * * php ~/src/batch/cronexec.php fixed10 >> ~/src/batch/cronexec.log
+0 11 * * * php ~/src/batch/cronexec.php fixed11 >> ~/src/batch/cronexec.log
+0 12 * * * php ~/src/batch/cronexec.php fixed12 >> ~/src/batch/cronexec.log
+0 13 * * * php ~/src/batch/cronexec.php fixed13 >> ~/src/batch/cronexec.log
+0 14 * * * php ~/src/batch/cronexec.php fixed14 >> ~/src/batch/cronexec.log
