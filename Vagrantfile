@@ -17,7 +17,14 @@ Vagrant.configure("2") do |config|
     server.vm.synced_folder "src", "/home/vagrant/src", type: "rsync"
     
     server.vm.provision "shell", :path => "provision_web.sh", privileged: false
+  end
     
+  config.vm.define "web2_serer" do |server|
+    server.vm.box = "ubuntu/precise64"
+    server.vm.network "private_network", ip: "192.168.33.30"
+    server.vm.synced_folder "src", "/home/vagrant/src", type: "rsync"
+    
+    server.vm.provision "shell", :path => "provision_web2.sh", privileged: false
     
     
   end

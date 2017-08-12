@@ -14,7 +14,7 @@ sudo yum -y install perl vim gcc  git wget sshpass
 sudo yum install -y -q ntp
 
 sudo service ntpd stop
-sudo chkconfig nptd off
+sudo chkconfig ntpd off
 
 # 日本時間設定
 sudo cp /usr/share/zoneinfo/Japan /etc/localtime

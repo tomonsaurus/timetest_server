@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 echo "**exec user:"
 whoami
 
@@ -8,8 +7,6 @@ whoami
 echo "**yum install"
 
 sudo yum -y install perl vim gcc  git
-
-
 sudo yum install -y -q ntp
 
 sudo timedatectl set-timezone Asia/Tokyo
@@ -19,7 +16,6 @@ sudo yum install -y openssl-devel readline-devel zlib-devel
 sudo sed -i -e 's/^PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 sudo systemctl restart sshd
 sudo sed -i -e 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
-
 
 
 sudo systemctl disable firewalld
@@ -35,10 +31,6 @@ sudo yum install -y wget
 
 ################################################
 sudo yum install -y ruby
-
-# テスト用のためrubyは早くインストールできるようにcentos7付属のものにしておく
-
-<< COMMENTOUT
 
 echo "**rbenv"
 cd ~
@@ -71,26 +63,16 @@ rbenv exec gem install bundler
 
 rbenv rehash
 
-COMMENTOUT
-
-
-
 # rspec, serverspecのインストール
 gem install bundler
-
 bundle init
 
-
 #echo 'gem "rspec"' >> Gemfile
-#echo 'gem "serverspec"' >> Gemfile
+echo 'gem "serverspec"' >> Gemfile
 echo 'gem "thor"' >> Gemfile
-#echo 'gem "infrataster"' >> Gemfile
-
-
-
+echo 'gem "infrataster"' >> Gemfile
 
 bundle install --path ~/vendor/bundle 
-
 bundle install --binstubs
 
 # ansibleインストール
@@ -99,10 +81,7 @@ sudo yum install -y epel-release
 sudo yum install -y ansible sshpass
 
 
-
 # 時間設定
-
-
 # atコマンド
 sudo yum install -y at
 
@@ -110,8 +89,10 @@ sudo systemctl enable atd
 sudo systemctl start atd
 
 # phantoms for infrataster capybara
-#sudo rpm -ivh http://repo.okay.com.mx/centos/7/x86_64/release/okay-release-1-1.noarch.rpm
-#sudo yum -y install phantomjs
+sudo rpm -ivh http://repo.okay.com.mx/centos/7/x86_64/release/okay-release-1-1.noarch.rpm
+sudo yum -y install phantomjs
+
+cd ~
 
 echo "**end: admin server"
 

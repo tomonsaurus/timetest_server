@@ -7,8 +7,8 @@
 */5 * * * * php ~/src/batch/cronexec.php every5min  >> ~/src/batch/cronexec.log
 ############################
 # Fixed 
-0 1  * * * php ~/src/batch/cronexec.php fixed9 >> ~/src/batch/cronexec.log
-0 9  * * * php ~/src/batch/cronexec.php fixed9  >> ~/src/batch/cronexec.log
+0 1  * * * php ~/src/batch/cronexec.php fixed01 >> ~/src/batch/cronexec.log
+0 9  * * * php ~/src/batch/cronexec.php fixed09  >> ~/src/batch/cronexec.log
 0 10 * * * php ~/src/batch/cronexec.php fixed10 >> ~/src/batch/cronexec.log
 0 11 * * * php ~/src/batch/cronexec.php fixed11 >> ~/src/batch/cronexec.log
 0 12 * * * php ~/src/batch/cronexec.php fixed12 >> ~/src/batch/cronexec.log

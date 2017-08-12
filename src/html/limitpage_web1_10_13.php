@@ -8,13 +8,13 @@ $now = new DateTime();
 
 if($now > $day1 && $now < $day2) {
 
-        print "HELLO!!!<br>OPEN";
+        print "HELLO web1!!!<br>OPEN";
 
         exit;
 
 }
 
-print "close...";
+print "close web1...";
 
 
 
